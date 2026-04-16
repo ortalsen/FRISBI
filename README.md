@@ -74,7 +74,7 @@ If you find this work useful in your research, please consider citing:
 ```bibtex
 @inproceedings{senoufinductive,
   title={Inductive Domain Transfer In Misspecified Simulation-Based Inference},
-  author={Senouf, Ortal and Wehenkel, Antoine and Vincent-Cuaz, C{\'e}dric and Abbe, Emmanuel and Frossard, Pascal},
+  author={Senouf, Ortal and Wehenkel, Antoine and Vincent-Cuaz, C{\'e}dric and Abb{\'e}, Emmanuel and Frossard, Pascal},
   booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
   year={2025}
 }
