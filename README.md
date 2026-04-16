@@ -1,7 +1,8 @@
 # Inductive Domain Transfer in Misspecified SBI
 
-This repository provides the implementaion to help reproduce the results presented in our manuscript.
-The code enables reproduction of all experiments **except** the one involving arterial pressure waves (Figure 5), which requires credentials and a signed agreement to access the MIMIC dataset.
+This repository provides the implementation of the NeurIPS25' paper: Inductive Domain Transfer in Misspecified Simulation-Based Inference.
+
+The code enables reproduction of all experiments **except** the one involving arterial pressure waves (Figure 5), which requires credentials and a signed agreement to access the [MIMIC](https://physionet.org/content/mimiciii/1.4/) dataset.
 
 ---
 
@@ -63,3 +64,17 @@ You can inspect and analyze them manually via the wandb dashboard.
 
 To reproduce plots similar to those in the manuscript, follow the instructions in `analysis.ipynb`.
 You will need to provide the wandb remote paths for the relevant runs as detailed in the notebook.
+
+---
+
+## Citation
+
+If you find this work useful in your research, please consider citing:
+
+```bibtex
+@inproceedings{senoufinductive,
+  title={Inductive Domain Transfer In Misspecified Simulation-Based Inference},
+  author={Senouf, Ortal and Wehenkel, Antoine and Vincent-Cuaz, C{\'e}dric and Abbe, Emmanuel and Frossard, Pascal},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025}
+}
