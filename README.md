@@ -1,8 +1,6 @@
 # Inductive Domain Transfer in Misspecified SBI
 
-## Supplementary Material – Reproducing Results
-
-This document provides implementation details to help reproduce the results presented in our manuscript.
+This repository provides the implementaion to help reproduce the results presented in our manuscript.
 The code enables reproduction of all experiments **except** the one involving arterial pressure waves (Figure 5), which requires credentials and a signed agreement to access the MIMIC dataset.
 
 ---
