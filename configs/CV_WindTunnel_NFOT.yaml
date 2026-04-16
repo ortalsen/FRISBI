@@ -1,0 +1,83 @@
+params_infer:
+  H:
+    index: 0 
+    scalers:
+      type: "uniform"
+      params:
+        min: 0.0
+        max: 45.0
+
+backbone:
+  name: "CNNBackbone"
+  params_sim: 1
+  params:
+    num_layers: 4
+    input_channels: 1
+    input_size: 50
+    output_size: 16 
+    num_filters: 16 
+    kernel_size: 3
+
+
+real_data:
+  name: "WindTunnel"
+  params:
+    exp_name: "load_out_0.5_osr_downwind_4"
+  
+  train:
+    num_samples: 1000
+    idx_offset: 0
+
+  val:
+    num_samples: 200
+    idx_offset: 1000
+
+  calib_train:
+    num_samples: 50
+    idx_offset: 1200
+
+  calib_test:
+    num_samples: 1000
+    idx_offset: 2200
+
+sim_data:
+  name: "WindTunnelModelA2C3"
+  params:
+    resources: "WindTunnelModelA2C3.npy"
+  
+  train:
+    num_samples: 1000
+    idx_offset: 0
+
+  val:
+    num_samples: 200
+    idx_offset: 1000
+  
+  test:
+    num_samples: 1000
+    idx_offset: 1200
+  
+
+training:
+  num_workers: 4
+  num_folds: 5
+  epochs: 100
+  lr_npe: 0.0001
+  lr_nse_ft: 0.0001
+  lr_nf_align: 0.0001 
+  tau_a: 1e10
+  tau_b: 1e10
+  gamma: 0.5
+  posterior_train_sample: 100
+  posterior_test_sample: 1000
+  npe_ckpt: "9nl5o5pt"
+  nse_ckpt: "" 
+  nf_align_ckpt: "" 
+  wassOT_ft_ckpt: "" 
+  nf_wassOT_align_ckpt: "" 
+  early_stopping: [false, false, false]
+  patience: [10, 5, 5]
+
+sweep_hyperparams:
+  lr_nse_ft_end_to_end: [0.0001] #[0.001, 0.0001]
+  batch_size: [64] #[32, 64, 128] 
